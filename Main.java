@@ -1,3 +1,6 @@
+import composite.ListVampires;
+import composite.LordVampire;
+import composite.Vampire;
 import adapter.AdapterForWizard;
 import adapter.Communication;
 import adapter.VampireCommunication;
@@ -18,5 +21,14 @@ public class Main {
 
         speed.useAbility();
         blood.useAbility();
+
+        Vampire lord = new LordVampire("Дракула");
+        Vampire lord2 = new LordVampire("Владіс");
+
+        ListVampires clan = new ListVampires();
+        clan.addVampire(lord);
+        clan.addVampire(lord2);
+
+        clan.showName();
     }
 }
